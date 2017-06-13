@@ -1,0 +1,13 @@
+name: recolor
+version: 0.1.0
+
+authors:
+  - Rich Daley <rich@fishpercolator.co.uk>
+
+targets:
+  recolor:
+    main: src/recolor.cr
+
+crystal: 0.22.0
+
+license: MIT
