@@ -1,6 +1,11 @@
 name: recolor
 version: 0.1.0
 
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+    branch: master
+
 authors:
   - Rich Daley <rich@fishpercolator.co.uk>
 
@@ -8,6 +13,6 @@ targets:
   recolor:
     main: src/recolor.cr
 
-crystal: 0.22.0
+crystal: 0.23.0
 
 license: MIT
