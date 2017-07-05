@@ -31,7 +31,7 @@ class SvgColorizer
     end
     %w{fill stroke}.each do |att|
       if node[att]? && node[att] != "none"
-        node.attributes[att].content = color
+        node[att] = color
       end
       node.children.each do |child|
         colorize_node(child, color)
