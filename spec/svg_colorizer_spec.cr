@@ -8,9 +8,42 @@ describe "SvgColorizer" do
   
   describe "#colorize" do
     context "filled circle" do
+      svg = subject %{<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"> <ellipse cx="60" cy="60" rx="50" ry="50" /></svg>}
       it "adds a fill to the root element" do
-        filled_circle = subject( %{<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"> <ellipse cx="60" cy="60" rx="50" ry="50" /></svg>})
-        filled_circle.colorize("#8080ff").should match(%r{<svg [^>]*fill="#8080ff"})
+        svg.colorize("#8080ff").should match(%r{<svg [^>]*fill="#8080ff"})
+      end
+    end
+    context "circle with existing fill in root element" do
+      svg = subject %{<svg fill="#ff0000" width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"> <ellipse cx="60" cy="60" rx="50" ry="50" /></svg>}
+      it "adds a fill to the root element" do
+        svg.colorize("#8080ff").should match(%r{<svg [^>]*fill="#8080ff"})
+      end
+      it "removes the existing fill" do
+        svg.colorize("#8080ff").should_not match(%r{fill="#ff0000"})
+      end
+    end
+    context "circle with its own fill defined" do
+      svg = subject %{<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"> <ellipse fill="#008000" cx="60" cy="60" rx="50" ry="50" /></svg>}
+      it "updates the existing fill on the child element" do
+        svg.colorize("#8080ff").should match(%r{<ellipse [^>]*fill="#8080ff"})
+      end
+      it "removes the old fill" do
+        svg.colorize("#8080ff").should_not match(%r{<ellipse [^>]*fill="#008000"})
+      end
+    end
+    context "hollow circle" do
+      svg = subject %{<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"> <ellipse cx="60" cy="60" rx="50" ry="50" stroke="black" stroke-width="5" fill="none"/></svg>}
+      it "updates the stroke value" do
+        svg.colorize("#8080ff").should match(%r{<ellipse [^>]*stroke="#8080ff"})
+      end
+      it "leaves the empty fill alone" do
+        svg.colorize("#8080ff").should match(%r{<ellipse [^>]*fill="none"})
+      end
+    end
+    context "circle coloured with CSS" do
+      svg = subject %{<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"> <style type="text/css">ellipse { fill: goldenrod; }</style><ellipse cx="60" cy="60" rx="50" ry="50" /></svg>}
+      it "fixes the CSS" do
+        svg.colorize("#8080ff").should match(%r{<style.*fill: #8080ff;.*</style>})
       end
     end
   end
