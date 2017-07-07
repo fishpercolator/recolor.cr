@@ -1,4 +1,5 @@
 require "xml"
+require "base64"
 
 class SvgColorizer
   

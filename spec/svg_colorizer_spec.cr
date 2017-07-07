@@ -48,4 +48,11 @@ describe "SvgColorizer" do
     end
   end
   
+  describe "#colorize_as_data" do
+    it "returns the correct data URI" do
+      svg = subject %{<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"> <ellipse cx="60" cy="60" rx="50" ry="50" /></svg>}
+      svg.colorize_as_data("#8080ff").should eq("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjAvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMtU1ZHLTIwMDEwOTA0L0RURC9zdmcxMC5kdGQiPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxMjAiIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiBmaWxsPSIjODA4MGZmIj4gPGVsbGlwc2UgY3g9IjYwIiBjeT0iNjAiIHJ4PSI1MCIgcnk9IjUwIi8+PC9zdmc+Cg==")
+    end
+  end
+  
 end
