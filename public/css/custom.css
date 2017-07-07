@@ -1,0 +1,39 @@
+h1, p {
+  text-align: center; }
+
+#color-control {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-bottom: 2em; }
+  #color-control input#color {
+    display: none; }
+
+form#drop {
+  position: relative;
+  margin: 2em; }
+  form#drop .dz-preview .dz-image {
+    width: 64px;
+    height: 64px; }
+
+#response {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  #response .output {
+    position: relative;
+    margin: 1em;
+    text-align: center; }
+    #response .output > * {
+      display: block; }
+    #response .output img {
+      position: relative;
+      width: 6em;
+      margin: 0 auto; }
+    #response .output a {
+      margin-top: 0.5em;
+      text-decoration: none; }
+      #response .output a:hover {
+        text-decoration: underline; }
+
+/*# sourceMappingURL=custom.css.map */

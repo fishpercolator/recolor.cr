@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Recolor</title>
+    <% %w{jquery spectrum dropzone recolor}.each do |js| %>
+      <script src="js/<%= js %>.js" type="text/javascript"></script>
+    <% end %>
+    <% %w{normalize spectrum dropzone custom}.each do |style| %>
+      <link href="css/<%= style %>.css" rel="stylesheet" type="text/css"></link>
+    <% end %>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Recolor.ink</h1>
+      <%= content %>
+    </main>
+  </body>
+</html>
