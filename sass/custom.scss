@@ -1,12 +1,45 @@
-body {
-  background: url(/img/bg.jpg) no-repeat center center;
-  background-size: cover;
+html {
+  height: 100%;
   font-family: 'Muli', sans-serif;
   font-size: 20px;
 }
 
+body {
+  margin: 0;
+  min-height: 100%;
+  background: url(/img/bg.jpg) no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#container {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 6rem;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+a {
+  color: #0D9EA3;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 main {
-  margin: 2em auto;
+  margin: 0 auto;
+  padding-top: 2em;
   max-width: 1280px;
   
   h1, h2, p {
@@ -32,15 +65,6 @@ main {
     border-bottom: 1px solid #DBD9D0;
   }
 
-  a {
-    color: #0D9EA3;
-    text-decoration: none;
-    font-weight: bold;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
   #color-control {
     display: flex;
     flex-flow: column;
@@ -55,9 +79,12 @@ main {
     background: rgba(0,0,0,0.05);
     position: relative;
     margin: 2em;
-    .dz-preview .dz-image {
-      width: 64px;
-      height: 64px;
+    .dz-preview {
+      background: transparent;
+      .dz-image {
+        width: 64px;
+        height: 64px;
+      }  
     }
   }
 
