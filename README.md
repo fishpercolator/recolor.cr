@@ -1,22 +1,16 @@
-# recolor
+# Recolor.ink
 
-TODO: Write a description here
+This is a Kemal web application that powers https://recolor.ink/
 
 ## Installation
 
-TODO: Write installation instructions here
+To get it running in a development environment, just do:
 
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
+    crystal src/recolor.cr
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/recolor/fork )
+1. Fork it ( https://github.com/fishpercolator/recolor.cr/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -24,4 +18,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) Rich Daley - creator, maintainer
+- [[pedantic-git]](https://github.com/pedantic-git) Rich Daley - creator, maintainer
