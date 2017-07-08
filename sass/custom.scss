@@ -1,0 +1,88 @@
+body {
+  background: url(/img/bg.jpg) no-repeat center center;
+  background-size: cover;
+  font-family: 'Muli', sans-serif;
+  font-size: 20px;
+}
+
+main {
+  margin: 2em auto;
+  max-width: 1280px;
+  
+  h1, h2, p {
+    text-align: center;
+    &#logo {
+      margin: 0;
+    }
+  }
+  
+  nav {
+    text-align: center;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #DBD9D0;
+  }
+
+  a {
+    color: #0D9EA3;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  #color-control {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 2em;
+    input#color {
+      display: none;
+    }
+  }
+
+  form#drop {
+    background: rgba(0,0,0,0.05);
+    position: relative;
+    margin: 2em;
+    .dz-preview .dz-image {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  #response {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    .output {
+      position: relative;
+      margin: 1em;
+      text-align: center;
+      height: 8em;
+      width: 10em;
+      > * {
+        display: block;
+      }
+      img {
+        position: absolute;
+        left: 50%;
+        bottom: 1.7em;
+        width: 6em;
+        transform: translateX(-3em);
+        margin: 0 auto;
+      }
+      a {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        width: 10em;
+        max-width: 10em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+}
