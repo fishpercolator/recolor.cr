@@ -11,9 +11,19 @@ main {
   
   h1, h2, p {
     text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
     &#logo {
       margin: 0;
+      img {
+        width: 512px;
+        max-width: 80vw;
+      }
     }
+  }
+  
+  h2 {
+    font-size: 24px;
   }
   
   nav {
@@ -25,6 +35,7 @@ main {
   a {
     color: #0D9EA3;
     text-decoration: none;
+    font-weight: bold;
     &:hover {
       text-decoration: underline;
     }
@@ -85,4 +96,10 @@ main {
     }
   }
 
+}
+
+main.static {
+  h1, h2, p {
+    text-align: left;
+  }
 }

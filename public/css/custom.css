@@ -8,16 +8,24 @@ main {
   margin: 2em auto;
   max-width: 1280px; }
   main h1, main h2, main p {
-    text-align: center; }
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem; }
     main h1#logo, main h2#logo, main p#logo {
       margin: 0; }
+      main h1#logo img, main h2#logo img, main p#logo img {
+        width: 512px;
+        max-width: 80vw; }
+  main h2 {
+    font-size: 24px; }
   main nav {
     text-align: center;
     padding-bottom: 1em;
     border-bottom: 1px solid #DBD9D0; }
   main a {
     color: #0D9EA3;
-    text-decoration: none; }
+    text-decoration: none;
+    font-weight: bold; }
     main a:hover {
       text-decoration: underline; }
   main #color-control {
@@ -62,3 +70,6 @@ main {
         max-width: 10em;
         overflow: hidden;
         text-overflow: ellipsis; }
+
+main.static h1, main.static h2, main.static p {
+  text-align: left; }
