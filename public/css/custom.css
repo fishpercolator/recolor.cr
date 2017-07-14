@@ -1,17 +1,18 @@
 html {
   height: 100%;
   font-family: 'Muli', sans-serif;
-  font-size: 20px; }
-
-body {
-  margin: 0;
-  min-height: 100%;
+  font-size: 20px;
+  box-sizing: border-box;
   background: url(/img/bg.jpg) no-repeat center center;
   background-attachment: fixed;
   background-size: cover; }
 
-#container {
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
   position: relative;
+  margin: 0;
   min-height: 100%;
   padding-bottom: 6rem; }
 
