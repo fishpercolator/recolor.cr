@@ -19,3 +19,4 @@ To get it running in a development environment, just do:
 ## Contributors
 
 - [[pedantic-git]](https://github.com/pedantic-git) Rich Daley - creator, maintainer
+.
