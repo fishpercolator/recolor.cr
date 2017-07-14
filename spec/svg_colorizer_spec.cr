@@ -46,6 +46,12 @@ describe "SvgColorizer" do
         svg.colorize("#8080ff").should match(%r{<style.*fill: #8080ff;.*</style>})
       end
     end
+    context "circle coloured with inline CSS" do
+      svg = subject %{<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"> <ellipse cx="60" cy="60" rx="50" ry="50" style="fill:#ff0000"/></svg>}
+      it "fixes the inline CSS" do
+        svg.colorize("#8080ff").should match(%r{style="fill: #8080ff;"})
+      end
+    end
   end
   
   describe "#colorize_as_data" do
