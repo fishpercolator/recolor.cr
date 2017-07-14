@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  min-height: 100%;
   font-family: 'Muli', sans-serif;
   font-size: 20px;
   box-sizing: border-box;
