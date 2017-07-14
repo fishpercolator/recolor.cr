@@ -1,15 +1,12 @@
 Dropzone.autoDiscover = false;
 
 // From clrs.cc
-var PALETTE = [  
-  ['#dddddd', '#aaaaaa'],
-  ['#001f3f', '#ffdc00'],
-  ['#0074d9', '#ff851b'],
-  ['#7fdbff', '#ff4136'],
-  ['#39cccc', '#85144b'],
-  ['#3d9970', '#f012be'],
-  ['#2ecc40', '#b10dc9'],
-  ['#01ff70', '#111111'],
+var PALETTE = [
+  ['#dddddd', '#aaaaaa', '#111111'],
+  ['#001f3f', '#0074d9', '#7fdbff'],
+  ['#3d9970', '#2ecc40', '#01ff70'],
+  ['#ffdc00', '#ff851b', '#ff4136'],
+  ['#85144b', '#f012be', '#b10dc9'],
 ];
 var PALETTE_FLATTENED = [].concat.apply([], PALETTE);
 
@@ -22,7 +19,8 @@ function init_spectrum() {
     preferredFormat: 'hex',
     palette: PALETTE,
     clickoutFiresChange: true,
-    showButtons: false,
+    showButtons: true,
+    maxSelectionSize: 3,
     change: function (color) {
       $('input[name="color"]').val(color);
     }

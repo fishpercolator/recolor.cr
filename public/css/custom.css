@@ -99,3 +99,26 @@ main {
 
 main.static h1, main.static h2, main.static p {
   text-align: left; }
+
+.sp-replacer, .sp-replacer:hover, .sp-replacer.sp-active {
+  border-color: #808080; }
+  .sp-replacer .sp-preview, .sp-replacer:hover .sp-preview, .sp-replacer.sp-active .sp-preview {
+    width: 2rem;
+    height: 2rem; }
+  .sp-replacer .sp-dd, .sp-replacer:hover .sp-dd, .sp-replacer.sp-active .sp-dd {
+    line-height: 2rem; }
+
+.sp-container {
+  border-color: #808080; }
+  .sp-container .sp-input {
+    font-size: 0.8rem !important;
+    background-color: white; }
+  .sp-container button {
+    font-size: 0.8rem; }
+  .sp-container .sp-cancel {
+    font-size: 0.6rem; }
+  .sp-container .sp-picker-container {
+    width: 250px; }
+  .sp-container .sp-thumb-el {
+    width: 1rem;
+    height: 1rem; }
