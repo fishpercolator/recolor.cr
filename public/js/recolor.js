@@ -4,6 +4,7 @@ Dropzone.options.drop = {
   dictDefaultMessage: 'Now drag black SVGs here',
   thumbnailWidth: 64,
   thumbnailHeight: 64,
+  maxFilesize: 1, // up to 1MB allowed 
   init: function() {
     this.on('success', function (file, response) {
       var output = $('<div class="output"></div>');
