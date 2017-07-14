@@ -109,6 +109,7 @@ main {
         left: 50%;
         bottom: 1.7em;
         width: 6em;
+        max-height: 8em;
         transform: translateX(-3em);
         margin: 0 auto;
       }
@@ -121,6 +122,7 @@ main {
         max-width: 10em;
         overflow: hidden;
         text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
   }
