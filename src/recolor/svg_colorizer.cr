@@ -7,6 +7,10 @@ class SvgColorizer
     @doc = XML.parse(data)
   end
   
+  def initialize(data : IO)
+    @doc = XML.parse(data)
+  end
+  
   # Output the document colorized with the given hex color
   def colorize(color : String)
     if root = @doc.root
