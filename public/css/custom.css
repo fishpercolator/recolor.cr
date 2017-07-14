@@ -5,8 +5,8 @@ html {
   font-size: 20px;
   box-sizing: border-box;
   background: url(/img/bg.jpg) no-repeat center center;
-  background-attachment: fixed;
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed; }
 
 *, *:before, *:after {
   box-sizing: inherit; }

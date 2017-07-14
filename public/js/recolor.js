@@ -1,3 +1,5 @@
+Dropzone.autoDiscover = false;
+
 // From clrs.cc
 var PALETTE = [  
   ['#dddddd', '#aaaaaa'],
@@ -29,7 +31,8 @@ function init_spectrum() {
 }
 
 function init_dropzone() {
-  Dropzone.options.drop = {
+  console.log("Hello");
+  new Dropzone("form#drop", {
     paramName: 'svg',
     acceptedFiles: 'image/svg+xml',
     dictDefaultMessage: 'Now drag black SVGs here',
@@ -48,8 +51,7 @@ function init_dropzone() {
         }, 1000);
       });
     }
-  }
-  $('#drop').dropzone();
+  });
 }
 
 $(document).on('turbolinks:load', function () {
