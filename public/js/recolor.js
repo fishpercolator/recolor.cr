@@ -29,7 +29,6 @@ function init_spectrum() {
 }
 
 function init_dropzone() {
-  console.log("Hello");
   new Dropzone("form#drop", {
     paramName: 'svg',
     acceptedFiles: 'image/svg+xml',
