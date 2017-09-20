@@ -5,6 +5,9 @@
   "repository": "git@github.com:fishpercolator/recolor.cr.git",
   "author": "Rich Daley <rich@fishpercolator.co.uk>",
   "license": "MIT",
+  "scripts": {
+    "heroku-postbuild": "webpack -p --progress"
+  },
   "dependencies": {
     "dropzone": "^5.1.1",
     "jquery": "^3.2.1",
