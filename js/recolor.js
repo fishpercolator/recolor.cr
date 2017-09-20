@@ -1,4 +1,10 @@
+import * as Turbolinks from "turbolinks";
+import Dropzone from "dropzone";
+import $ from "jquery";
+import "spectrum-colorpicker/spectrum";
+
 Dropzone.autoDiscover = false;
+Turbolinks.start();
 
 // From clrs.cc
 var PALETTE = [
