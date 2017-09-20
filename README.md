@@ -4,9 +4,21 @@ This is a Kemal web application that powers https://recolor.ink/
 
 ## Installation
 
+You'll need yarn and crystal installed. Webpack is used to compile the JS and CSS assets and is installed as a dependency by Yarn.
+
 To get it running in a development environment, just do:
 
+    yarn
+    ./node_modules/webpack/bin/webpack.js
     crystal src/recolor.cr
+    
+### Using Guard
+
+Development is easier if you use Guard, which watches for file changes and rebuilds things automatically. If you do this, you don't need to build anything yourself:
+
+    yarn
+    gem install guard guard-kemal guard-webpack
+    guard
 
 ## Contributing
 
