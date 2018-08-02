@@ -5,7 +5,10 @@
   "repository": "git@github.com:fishpercolator/recolor.cr.git",
   "author": "Rich Daley <rich@fishpercolator.co.uk>",
   "license": "MIT",
+  "main": "public/main.js",
   "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack -p --progress",
     "heroku-postbuild": "webpack -p --progress"
   },
   "dependencies": {
@@ -15,15 +18,15 @@
     "turbolinks": "^5.0.3"
   },
   "devDependencies": {
-    "autoprefixer-loader": "^3.2.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
-    "css-loader": "^0.28.7",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.18.2",
-    "webpack": "^3.6.0"
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0"
   }
 }

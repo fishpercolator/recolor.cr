@@ -11,7 +11,7 @@ end
 
 # FIXME - make this nicer and have error-checking
 post "/upload" do |env|
-  file = env.params.files["svg"]
+  file = env.params.files.first
   filename = file.filename.to_s
   color = env.params.body["color"]
   env.response.content_type = "application/json"

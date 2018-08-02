@@ -1,32 +1,32 @@
-const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+var path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: './js/app.js',
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: "[name].js"
+    filename: 'main.js'
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
         exclude: /node_modules/,
-        query: {
-          presets: ['es2015']
+        use: {
+          loader: 'babel-loader'
         }
       },
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: ["css-loader", "autoprefixer-loader", "sass-loader"]
-        })
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin('style.css')
+    new MiniCssExtractPlugin({})
   ]
-};
+}
