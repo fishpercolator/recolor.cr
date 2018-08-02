@@ -1,2 +1,2 @@
 import "./recolor.js";
-import "./styles/recolor.scss";
+import "./styles/main.scss";

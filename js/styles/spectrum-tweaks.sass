@@ -1,0 +1,27 @@
+// A few tweaks to make the Spectrum colorpicker more attractive
+
+$border-color:   hsl(0, 0%, 50%)
+$input-bg-color: hsl(0, 0%, 100%)
+
+.sp-replacer, .sp-replacer:hover, .sp-replacer.sp-active
+  border-color: $border-color
+  .sp-preview
+    width: 2rem
+    height: 2rem
+  .sp-dd
+    line-height: 2rem
+
+.sp-container
+  border-color: $border-color
+  .sp-input
+    font-size: 0.8rem !important
+    background-color: $input-bg-color
+  button
+    font-size: 0.8rem
+  .sp-cancel
+    font-size: 0.6rem
+  .sp-picker-container
+    width: 250px
+  .sp-thumb-el
+    width: 1rem
+    height: 1rem

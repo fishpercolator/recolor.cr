@@ -11,7 +11,7 @@ To get it running in a development environment, just do:
     yarn
     ./node_modules/webpack/bin/webpack.js
     crystal src/recolor.cr
-    
+
 ### Using Guard
 
 Development is easier if you use Guard, which watches for file changes and rebuilds things automatically. If you do this, you don't need to build anything yourself:
@@ -19,6 +19,10 @@ Development is easier if you use Guard, which watches for file changes and rebui
     yarn
     gem install guard guard-kemal guard-webpack
     guard
+
+### Or, with Docker-compose
+
+    docker-compose up
 
 ## Contributing
 

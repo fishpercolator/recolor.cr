@@ -1,0 +1,119 @@
+@import "vars"
+
+// Layout stuff
+
+html
+  height: 100%
+  min-height: 100%
+  font-family: $font
+  color: $text-color
+  font-size: $em-size
+  box-sizing: border-box
+  background: url(/img/bg.jpg) no-repeat center center
+  background-size: cover
+  background-attachment: fixed
+
+*, *:before, *:after
+  box-sizing: inherit
+
+body
+  position: relative
+  margin: 0
+  min-height: 100%
+  padding-bottom: 6rem
+
+main
+  margin: 0 auto
+  padding-top: 2em
+  max-width: 1280px
+
+footer
+  position: absolute
+  right: 0
+  bottom: 0
+  left: 0
+  padding: 1rem
+  text-align: right
+  font-size: 0.8rem
+
+// Basic elements
+
+a
+  color: $link-color
+  text-decoration: none
+  font-weight: bold
+  &:hover
+    text-decoration: underline
+
+h1, h2, p
+  text-align: center
+  margin-left: 1rem
+  margin-right: 1rem
+  // Paragraphs are left-aligned on the 'about' page
+  main.static &
+    text-align: left
+
+h2
+  font-size: 1.2
+
+// Specific elements, top to bottom
+
+h1#logo
+  margin: 0
+  img
+    width: 512px
+    max-width: 80vw
+
+nav
+  text-align: center
+  padding-bottom: 1em
+  border-bottom: 1px solid $border-color
+
+#color-control
+  display: flex
+  flex-flow: column
+  align-items: center
+  margin-bottom: 2em
+  input#color
+    display: none
+
+form#drop
+  background: $dz-bg-color
+  position: relative
+  margin: 2em
+  .dz-preview
+    background: transparent
+    .dz-image
+      width: 3.2em
+      height: 3.2em
+
+#response
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  .output
+    position: relative
+    margin: 1em
+    text-align: center
+    height: 8em
+    width: 10em
+    > *
+      display: block
+    img
+      position: absolute
+      left: 50%
+      bottom: 1.7em
+      width: 6em
+      max-height: 8em
+      transform: translateX(-3em)
+      margin: 0 auto
+    a
+      display: block
+      position: absolute
+      bottom: 0
+      text-align: center
+      width: 10em
+      max-width: 10em
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap

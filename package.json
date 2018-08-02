@@ -7,9 +7,9 @@
   "license": "MIT",
   "main": "public/main.js",
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack -p --progress",
-    "heroku-postbuild": "webpack -p --progress"
+    "dev": "webpack",
+    "build": "webpack --mode production -p --progress",
+    "heroku-postbuild": "webpack --mode production -p --progress"
   },
   "dependencies": {
     "dropzone": "^5.1.1",
