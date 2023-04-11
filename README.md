@@ -34,5 +34,5 @@ Development is easier if you use Guard, which watches for file changes and rebui
 
 ## Contributors
 
-- [[pedantic-git]](https://github.com/pedantic-git) Rich Daley - creator, maintainer
+- [[pedantic-git]](https://github.com/pedantic-git) Quinn Daley - creator, maintainer
 .
